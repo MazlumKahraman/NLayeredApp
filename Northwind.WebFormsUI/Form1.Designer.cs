@@ -29,20 +29,35 @@ namespace Northwind.WebFormsUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.dgwProduct = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwProduct)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dgwProduct
+            // 
+            this.dgwProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwProduct.Location = new System.Drawing.Point(12, 12);
+            this.dgwProduct.Name = "dgwProduct";
+            this.dgwProduct.Size = new System.Drawing.Size(655, 169);
+            this.dgwProduct.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 380);
+            this.Controls.Add(this.dgwProduct);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgwProduct)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgwProduct;
     }
 }
 

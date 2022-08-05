@@ -1,0 +1,6 @@
+C:\Users\cyber\OneDrive\Masaüstü\Works\C#\NLayeredApp\Northwind.Entitites\bin\Debug\Northwind.Entitites.dll
+C:\Users\cyber\OneDrive\Masaüstü\Works\C#\NLayeredApp\Northwind.Entitites\bin\Debug\Northwind.Entitites.pdb
+C:\Users\cyber\OneDrive\Masaüstü\Works\C#\NLayeredApp\Northwind.Entitites\obj\Debug\Northwind.Entitites.csproj.CoreCompileInputs.cache
+C:\Users\cyber\OneDrive\Masaüstü\Works\C#\NLayeredApp\Northwind.Entitites\obj\Debug\Northwind.Entitites.dll
+C:\Users\cyber\OneDrive\Masaüstü\Works\C#\NLayeredApp\Northwind.Entitites\obj\Debug\Northwind.Entitites.pdb
+C:\Users\cyber\OneDrive\Masaüstü\Works\C#\NLayeredApp\Northwind.Entitites\obj\Debug\Northwind.Entitites.csproj.AssemblyReference.cache
