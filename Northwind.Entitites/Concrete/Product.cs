@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Northwind.Entitites.Concreate
+namespace Northwind.Entitites.Concrete
 {
     public class Product:IEntity
     {

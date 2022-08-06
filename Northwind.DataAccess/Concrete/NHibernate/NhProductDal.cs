@@ -1,5 +1,5 @@
 ﻿using Northwind.DataAccess.Abstract;
-using Northwind.Entitites.Concreate;
+using Northwind.Entitites.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Northwind.DataAccess.Concreate.NHibernate
+namespace Northwind.DataAccess.Concrete.NHibernate
 {
     public class NhProductDal : IProductDal
     {
@@ -21,17 +21,12 @@ namespace Northwind.DataAccess.Concreate.NHibernate
             throw new NotImplementedException();
         }
 
-        public Product Get(int id)
-        {
-            throw new NotImplementedException();
-        }
-
         public Product Get(Expression<Func<Product, bool>> filter)
         {
             throw new NotImplementedException();
         }
 
-        public List<Product> GetAll()
+        public List<Product> GetAll(Expression<Func<Product, bool>> filter = null)
         {
             List<Product> products = new List<Product>
             {
@@ -39,11 +34,6 @@ namespace Northwind.DataAccess.Concreate.NHibernate
                     QuantityPerUnit="1 in a box",UnitPrice=3000,UnitsInStock=11}
             };
             return products;
-        }
-
-        public List<Product> GetAll(Expression<Func<Product, bool>> filter = null)
-        {
-            throw new NotImplementedException();
         }
 
         public void Update(Product product)
