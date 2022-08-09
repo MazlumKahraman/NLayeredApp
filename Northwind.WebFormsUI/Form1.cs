@@ -1,5 +1,6 @@
 ﻿using Northwind.Business.Abstract;
 using Northwind.Business.Concrete;
+using Northwind.Business.DependencyResolvers.Ninject;
 using Northwind.DataAccess.Concrete.EntityFramework;
 using Northwind.DataAccess.Concrete.NHibernate;
 using Northwind.Entitites.Concrete;
@@ -21,8 +22,8 @@ namespace Northwind.WebFormsUI
         public Form1()
         {
             InitializeComponent();
-             _productService = new ProductManager(new EfProductDal());
-            _categoryService = new CategoryManager(new EfCategoryDal());
+            _productService = InstanceFactory.GetInstance<IProductService>();
+            _categoryService = InstanceFactory.GetInstance<ICategoryService>();
         }
         IProductService _productService;
         ICategoryService _categoryService;
@@ -78,31 +79,47 @@ namespace Northwind.WebFormsUI
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            _productService.Add(new Product
+            try
             {
-                CategoryId = Convert.ToInt32(cbxAddCategoryName.SelectedValue), 
-                ProductName = tbxAddProductName.Text,
-                QuantityPerUnit = tbxAddQuantity.Text,
-                UnitPrice = Convert.ToDecimal(tbxAddUnitPrice.Text),
-                UnitsInStock = Convert.ToInt16(tbxAddStockAmount.Text)
-            });
-            MessageBox.Show("Product Added!");
-            LoadProducts();
+                _productService.Add(new Product
+                {
+                    CategoryId = Convert.ToInt32(cbxAddCategoryName.SelectedValue),
+                    ProductName = tbxAddProductName.Text,
+                    QuantityPerUnit = tbxAddQuantity.Text,
+                    UnitPrice = Convert.ToDecimal(tbxAddUnitPrice.Text),
+                    UnitsInStock = Convert.ToInt16(tbxAddStockAmount.Text)
+                });
+                MessageBox.Show("Product Added!");
+                LoadProducts();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            _productService.Update(new Product
+            try
             {
-                ProductId= Convert.ToInt32(dgwProduct.CurrentRow.Cells[0].Value),
-                ProductName=tbxUpdateProductName.Text,
-                CategoryId = Convert.ToInt32(cbxUpdateCategoryName.SelectedValue),
-                UnitsInStock = Convert.ToInt16(tbxUpdateStockAmount.Text),
-                QuantityPerUnit = tbxUpdateQuantity.Text,
-                UnitPrice = Convert.ToDecimal(tbxUpdateUnitPrice.Text)
-            });
-            MessageBox.Show("Product Updated!");
-            LoadProducts();
+                _productService.Update(new Product
+                {
+                    ProductId = Convert.ToInt32(dgwProduct.CurrentRow.Cells[0].Value),
+                    ProductName = tbxUpdateProductName.Text,
+                    CategoryId = Convert.ToInt32(cbxUpdateCategoryName.SelectedValue),
+                    UnitsInStock = Convert.ToInt16(tbxUpdateStockAmount.Text),
+                    QuantityPerUnit = tbxUpdateQuantity.Text,
+                    UnitPrice = Convert.ToDecimal(tbxUpdateUnitPrice.Text)
+                });
+                MessageBox.Show("Product Updated!");
+                LoadProducts();
+            }
+            catch (Exception exception)
+            {
+
+                MessageBox.Show(exception.Message);
+            }
+
         }
 
         private void dgwProduct_CellClick(object sender, DataGridViewCellEventArgs e)

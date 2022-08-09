@@ -12,3 +12,11 @@ C:\Users\cyber\OneDrive\Masaüstü\Works\C#\NLayeredApp\Northwind.Business\obj\D
 C:\Users\cyber\OneDrive\Masaüstü\Works\C#\NLayeredApp\Northwind.Business\obj\Debug\Northwind.Business.csproj.CopyComplete
 C:\Users\cyber\OneDrive\Masaüstü\Works\C#\NLayeredApp\Northwind.Business\obj\Debug\Northwind.Business.dll
 C:\Users\cyber\OneDrive\Masaüstü\Works\C#\NLayeredApp\Northwind.Business\obj\Debug\Northwind.Business.pdb
+C:\Users\cyber\OneDrive\Masaüstü\Works\C#\NLayeredApp\Northwind.Business\bin\Debug\FluentValidation.dll
+C:\Users\cyber\OneDrive\Masaüstü\Works\C#\NLayeredApp\Northwind.Business\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\cyber\OneDrive\Masaüstü\Works\C#\NLayeredApp\Northwind.Business\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\cyber\OneDrive\Masaüstü\Works\C#\NLayeredApp\Northwind.Business\bin\Debug\FluentValidation.xml
+C:\Users\cyber\OneDrive\Masaüstü\Works\C#\NLayeredApp\Northwind.Business\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\cyber\OneDrive\Masaüstü\Works\C#\NLayeredApp\Northwind.Business\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\cyber\OneDrive\Masaüstü\Works\C#\NLayeredApp\Northwind.Business\bin\Debug\Ninject.dll
+C:\Users\cyber\OneDrive\Masaüstü\Works\C#\NLayeredApp\Northwind.Business\bin\Debug\Ninject.xml
